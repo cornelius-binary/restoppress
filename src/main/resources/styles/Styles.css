@@ -1,0 +1,16 @@
+.button {
+    -fx-font-weight: bold;
+}
+.alert{
+    -fx-margin: 0 8 0 0;
+}
+.menubar{
+    -fx-background-color: #647997;
+}
+.main-container{
+    -fx-background-color: #E4EAF0;
+}
+.menu{
+    -fx-text-fill: #cccccc;
+    -fx-font: bold;
+}

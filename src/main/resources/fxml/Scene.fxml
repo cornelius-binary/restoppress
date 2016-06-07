@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="667.0" styleClass="main-container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ke.co.binary.app.restoppress.restoppress.FXMLController">
+   <top>
+      <MenuBar styleClass="menubar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApplcaction" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="371.0" prefWidth="732.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="textArea" layoutX="11.0" layoutY="280.0" prefHeight="205.0" prefWidth="642.0" promptText="e.g. {&quot;code&quot;: &quot;07&quot;,  &quot;message&quot;: {    &quot;amount&quot;: &quot;999&quot;,    &quot;currency&quot;: &quot;KES&quot;,    &quot;merchantID&quot;: &quot;00000125&quot;,    &quot;referenceNo&quot;: &quot;1464932326566&quot;,    &quot;orderInfo&quot;: &quot;1464932326566&quot;,    &quot;receiptNo&quot;: &quot;&quot;,    &quot;authId&quot;: &quot;&quot;,    &quot;responseCode&quot;: &quot;07&quot;,    &quot;transactionNo&quot;: &quot;&quot;  }}" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="80.0" />
+            <TextField fx:id="urlView" layoutX="46.0" layoutY="14.0" prefHeight="25.0" prefWidth="367.0" promptText="e.g. http://www.binary.co.ke" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="254.0" />
+            <Label layoutX="11.0" layoutY="19.0" text="URL" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="19.0" />
+            <ChoiceBox fx:id="requestMethod" layoutX="419.0" layoutY="14.0" prefHeight="25.0" prefWidth="70.0" AnchorPane.rightAnchor="178.0" />
+            <Button layoutX="504.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" text="GO" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="11.0" layoutY="52.0" text="JSON" AnchorPane.leftAnchor="11.0" />
+            <Label layoutX="6.0" layoutY="301.0" text="Rounds" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="11.0" />
+            <TextField fx:id="rounds" layoutX="70.0" layoutY="296.0" promptText="Number of Requests" text="50" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="70.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <FlowPane fx:id="widgets" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="667.0" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar fx:id="progress" prefHeight="0.0" prefWidth="200.0">
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </ProgressBar>
+            <Label fx:id="time" styleClass="alert" text="Time">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <FlowPane.margin>
+                  <Insets right="8.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label fx:id="success" styleClass="alert" text="Success">
+               <FlowPane.margin>
+                  <Insets right="8.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label fx:id="rejected" styleClass="alert" text="Rejected">
+               <FlowPane.margin>
+                  <Insets right="8.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label fx:id="failed" styleClass="alert" text="Failed">
+               <FlowPane.margin>
+                  <Insets right="14.0" />
+               </FlowPane.margin>
+            </Label>
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>
